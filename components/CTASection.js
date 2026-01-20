@@ -53,7 +53,7 @@ export default function CTASection() {
             <Button
               variant="outline"
               size="large"
-              href={process.env.NEXT_PUBLIC_BOOKING_URL || 'https://cal.com/craft-call'}
+              href={process.env.NEXT_PUBLIC_BOOKING_URL || 'https://cal.com/achref-merzougui-k97hmk/craft-call'}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full"

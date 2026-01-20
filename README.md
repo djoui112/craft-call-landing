@@ -60,7 +60,7 @@ NEXT_PUBLIC_WAITLIST_API_URL=
 NEXT_PUBLIC_GA_ID=
 
 # Cal.com booking link
-NEXT_PUBLIC_BOOKING_URL=https://cal.com/craft-call
+NEXT_PUBLIC_BOOKING_URL=https://cal.com/achref-merzougui-k97hmk/craft-call
 ```
 
 ## Project Structure
