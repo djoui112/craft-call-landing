@@ -1,96 +1,33 @@
-'use client'
-import { motion } from 'framer-motion'
-import { Clock, GitBranch, Calendar, ListChecks, MessageSquare, Volume2 } from 'lucide-react'
-import { Card } from './ui/Card'
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-}
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
-
-const features = [
-  {
-    icon: Clock,
-    title: '24/7 Availability',
-    description: 'Nights, weekends, holidays - we\'re always on',
-  },
-  {
-    icon: GitBranch,
-    title: 'Smart Call Routing',
-    description: 'Emergencies get flagged. Quotes get scheduled. Spam gets filtered.',
-  },
-  {
-    icon: Calendar,
-    title: 'Appointment Booking',
-    description: 'Syncs with your calendar automatically. No double-bookings.',
-  },
-  {
-    icon: ListChecks,
-    title: 'Lead Qualification',
-    description: 'We ask the right questions so you know exactly what to expect',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Instant SMS Summaries',
-    description: 'Every call summarized and sent to your phone in under 60 seconds',
-  },
-  {
-    icon: Volume2,
-    title: 'Your Business Voice',
-    description: 'Customized greeting with your business name and messaging',
-  },
+const channels = [
+  { emoji: '📞', title: 'Phone calls', description: 'Every call answered, every time' },
+  { emoji: '💬', title: 'WhatsApp', description: 'Instant replies, day or night' },
+  { emoji: '📱', title: 'SMS', description: 'Confirmations and reminders, automated' },
+  { emoji: '🌐', title: 'Website chat', description: 'Convert visitors into bookings' },
+  { emoji: '📘', title: 'Messenger', description: 'Facebook DMs handled automatically' },
+  { emoji: '🔔', title: 'After hours', description: '11pm on a Sunday? Covered.' },
 ]
 
 export default function FeaturesSection() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl lg:text-5xl font-bold text-gray-900 text-center mb-12"
-        >
-          Everything You Need. Nothing You Don't.
-        </motion.h2>
+    <section className="py-20 sm:py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy text-center mb-14">
+          One AI. Every channel.
+        </h2>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {features.map((feature, index) => {
-            const Icon = feature.icon
-            return (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full hover:shadow-lg transition duration-300">
-                  <div className="bg-primary/10 p-4 rounded-lg w-fit mb-4">
-                    <Icon className="text-primary" size={32} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </Card>
-              </motion.div>
-            )
-          })}
-        </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8">
+          {channels.map((channel) => (
+            <div key={channel.title} className="flex gap-4 items-start">
+              <span className="text-2xl shrink-0" aria-hidden="true">
+                {channel.emoji}
+              </span>
+              <div>
+                <p className="font-semibold text-navy">{channel.title}</p>
+                <p className="text-gray-600 mt-1">{channel.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

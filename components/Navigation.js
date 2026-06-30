@@ -1,44 +1,40 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { Button } from './ui/Button'
-import { scrollToElement } from '@/lib/utils'
+
+const BOOKING_URL =
+  process.env.NEXT_PUBLIC_BOOKING_URL ||
+  'https://cal.com/achref-merzougui-k97hmk/craft-call'
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
-    }
-
+    const handleScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleCTAClick = (e) => {
-    e.preventDefault()
-    scrollToElement('waitlist-form')
-  }
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white shadow-md backdrop-blur-lg'
-          : 'bg-transparent'
+        scrolled ? 'bg-white/95 shadow-sm backdrop-blur-sm border-b border-gray-100' : 'bg-white'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center h-16 lg:h-20">
-          <div className="text-2xl font-bold text-primary">
-            Craft Call
-          </div>
+      <div className="max-w-5xl mx-auto px-5 sm:px-8">
+        <div className="flex justify-between items-center h-16">
+          <a href="#" className="text-xl font-serif font-bold text-navy tracking-tight">
+            CraftCall
+          </a>
           <Button
             variant="primary"
-            size="medium"
-            onClick={handleCTAClick}
+            size="small"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-block"
           >
-            Get Early Access
+            See it live →
           </Button>
         </div>
       </div>

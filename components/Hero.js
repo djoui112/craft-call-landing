@@ -1,124 +1,80 @@
-'use client'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { Button } from './ui/Button'
-import EmailCapture from './EmailCapture'
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-}
+const BOOKING_URL =
+  process.env.NEXT_PUBLIC_BOOKING_URL ||
+  'https://cal.com/achref-merzougui-k97hmk/craft-call'
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
+function PhoneAnimation() {
+  return (
+    <div className="relative w-28 h-28 mx-auto mt-12 sm:mt-16" aria-hidden="true">
+      <div className="absolute inset-0 flex items-center justify-center animate-pulse-ring">
+        <div className="w-24 h-24 rounded-full border-2 border-teal/30" />
+      </div>
+
+      <div className="absolute inset-0 flex items-center justify-center animate-phone-ring">
+        <svg
+          width="56"
+          height="56"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#0B1D3A"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+      </div>
+
+      <div className="absolute inset-0 flex items-center justify-center animate-show-check">
+        <div className="w-14 h-14 rounded-full bg-teal flex items-center justify-center">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function Hero() {
-
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50 pt-20 lg:pt-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="space-y-8"
+    <section className="bg-white pt-28 pb-16 sm:pt-32 sm:pb-20">
+      <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.15] tracking-tight">
+          Your clinic is losing patients while you sleep.
+        </h1>
+
+        <p className="mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          CraftCall answers every call, books every appointment, and replies to
+          every WhatsApp — 24 hours a day. So you don&apos;t have to.
+        </p>
+
+        <div className="mt-10">
+          <Button
+            variant="primary"
+            size="large"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <motion.h1
-              variants={fadeInUp}
-              className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight"
-            >
-              Stop Losing $1,200 Every Time You Miss a Call
-            </motion.h1>
-            
-            <motion.p
-              variants={fadeInUp}
-              className="text-xl lg:text-2xl text-gray-600 leading-relaxed"
-            >
-              Your AI receptionist answers 24/7, books appointments, and qualifies leads - while you focus on the work that pays.
-            </motion.p>
-
-            {/* Stat Callout */}
-            <motion.div
-              variants={fadeInUp}
-              className="border-l-4 border-accent bg-white p-6 rounded-lg shadow-md"
-            >
-              <p className="text-gray-700 font-medium">
-                HVAC and plumbing contractors miss <span className="font-bold text-primary">27%</span> of incoming calls.{' '}
-                <span className="font-bold text-primary">85%</span> of those callers never call back.
-              </p>
-            </motion.div>
-
-            {/* Email Form */}
-            <motion.div
-              variants={fadeInUp}
-              id="waitlist-form"
-              className="space-y-4"
-            >
-              <EmailCapture />
-
-              {/* Secondary CTA */}
-              <div className="pt-4">
-                <Button
-                  variant="outline"
-                  size="large"
-                  href={process.env.NEXT_PUBLIC_BOOKING_URL || 'https://cal.com/achref-merzougui-k97hmk/craft-call'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
-                >
-                  Book a Demo
-                </Button>
-                <p className="text-sm text-gray-600 mt-2">
-                  See Craft Call in action - we'll call your phone live
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Column - Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl"
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&auto=format"
-              alt="Contractor using phone while working on job site"
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            {/* 
-              Image Options (replace src URL above):
-              
-              Contractor on phone (current):
-              https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&auto=format
-              
-              HVAC technician working:
-              https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&auto=format
-              https://images.unsplash.com/photo-1621905251181-0161679bba86?w=800&h=600&fit=crop&auto=format
-              
-              Plumber working:
-              https://images.unsplash.com/photo-1621905251181-0161679bba86?w=800&h=600&fit=crop&auto=format
-              https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&auto=format
-              
-              Search Unsplash: https://unsplash.com/s/photos/hvac-technician
-              Search Unsplash: https://unsplash.com/s/photos/plumber-working
-              Search Unsplash: https://unsplash.com/s/photos/contractor-phone
-            */}
-          </motion.div>
+            See it answer a call live →
+          </Button>
+          <p className="mt-4 text-sm text-gray-500">
+            Free 2-week pilot · No contract · Setup in 48h
+          </p>
         </div>
+
+        <PhoneAnimation />
       </div>
     </section>
   )

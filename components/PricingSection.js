@@ -1,94 +1,61 @@
-'use client'
-import { motion } from 'framer-motion'
-import { CheckCircle } from 'lucide-react'
 import { Button } from './ui/Button'
-import { scrollToElement } from '@/lib/utils'
 
-const features = [
-  '500 minutes of AI call handling (~150-200 calls)',
-  '24/7 AI answering',
-  'Appointment booking',
-  'SMS notifications',
-  'Custom business greeting',
-  'Calendar integration',
+const BOOKING_URL =
+  process.env.NEXT_PUBLIC_BOOKING_URL ||
+  'https://cal.com/achref-merzougui-k97hmk/craft-call'
+
+const includes = [
+  'Unlimited calls',
+  'All channels',
+  'Full setup',
+  'Dedicated support',
 ]
 
 export default function PricingSection() {
-  const handleCTAClick = (e) => {
-    e.preventDefault()
-    scrollToElement('waitlist-form')
-  }
-
   return (
-    <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl lg:text-5xl font-bold mb-12"
-        >
-          Simple Pricing That Makes Sense
-        </motion.h2>
+    <section className="py-20 sm:py-24 bg-white">
+      <div className="max-w-2xl mx-auto px-5 sm:px-8 text-center">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-12">
+          It pays for itself in week one.
+        </h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white text-gray-900 p-12 rounded-2xl shadow-2xl"
-        >
-          <div className="inline-block bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            Early Access Pricing
-          </div>
-          
-          <div className="mb-8">
-            <div className="text-5xl font-bold mb-2">Starting at $99/month</div>
-          </div>
-
-          <div className="space-y-4 text-left max-w-md mx-auto mb-6">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="text-primary flex-shrink-0" size={20} />
-                <span className="text-gray-700">{feature}</span>
-              </div>
+        <div className="border border-navy/20 rounded-lg p-8 sm:p-10 text-left">
+          <p className="text-sm font-medium text-teal uppercase tracking-wide mb-2">
+            Pilot Plan — Free for 2 weeks
+          </p>
+          <p className="text-3xl sm:text-4xl font-bold text-navy mb-1">
+            Then $299<span className="text-lg font-normal text-gray-500">/month</span>
+          </p>
+          <p className="text-gray-600 mt-4 mb-6">
+            Includes: Everything.
+          </p>
+          <ul className="space-y-2 mb-8">
+            {includes.map((item) => (
+              <li key={item} className="flex items-center gap-2 text-gray-700">
+                <span className="text-teal">✓</span>
+                {item}
+              </li>
             ))}
-          </div>
-
-          <div className="mb-6 text-center">
-            <p className="text-gray-700 font-semibold mb-2">
-              Additional minutes: <span className="text-primary">$0.20/minute</span>
-            </p>
-            <p className="text-sm text-gray-600">
-              Final pricing tiers coming soon - join waitlist for early access discount
-            </p>
-          </div>
-
+          </ul>
           <Button
             variant="primary"
             size="large"
-            onClick={handleCTAClick}
-            className="w-full sm:w-auto"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full text-center"
           >
-            Get Early Access
+            Start your free pilot →
           </Button>
-        </motion.div>
+        </div>
 
-        {/* Value Comparison */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-lg p-6 max-w-md mx-auto"
-        >
-          <p className="text-lg">
-            <span className="font-semibold">Traditional receptionist:</span> $50,000/year.{' '}
-            <span className="font-semibold">Craft Call:</span> $1,200/year.{' '}
-            <span className="font-bold">You do the math.</span>
-          </p>
-        </motion.div>
+        <p className="mt-10 text-lg sm:text-xl font-semibold text-navy leading-relaxed">
+          One new patient = $2,000 lifetime value.
+          <br />
+          One month of CraftCall = $299.
+          <br />
+          <span className="text-gray-600 font-normal">The math isn&apos;t complicated.</span>
+        </p>
       </div>
     </section>
   )

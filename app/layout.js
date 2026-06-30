@@ -1,21 +1,37 @@
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
 })
 
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
+
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://craft-call.com'),
-  title: 'Craft Call - AI Phone Answering for HVAC & Plumbing Contractors',
-  description: 'Stop losing $1,200 per missed call. 24/7 AI receptionist that answers calls, books appointments, and qualifies leads. Starting at $99/month.',
+  title: 'CraftCall — AI Receptionist for Dental & Medical Clinics',
+  description:
+    'CraftCall answers every call, books every appointment, and replies to WhatsApp — 24 hours a day. Built for dental and medical clinics. Free 2-week pilot.',
+  keywords: [
+    'dental clinic AI receptionist',
+    'medical office phone answering',
+    'dental appointment booking AI',
+    'after hours dental calls',
+    'HIPAA friendly AI receptionist',
+    'dental practice phone automation',
+  ],
   openGraph: {
-    title: 'Craft Call - Never Miss Another Call',
-    description: 'AI phone answering for contractors. Answer every call, book every appointment, 24/7.',
+    title: 'CraftCall — AI Receptionist for Dental & Medical Clinics',
+    description:
+      'Your clinic is losing patients while you sleep. CraftCall answers every call, books appointments, and handles WhatsApp — 24/7.',
     url: 'https://craft-call.com',
-    siteName: 'Craft Call',
+    siteName: 'CraftCall',
     images: [
       {
         url: '/og-image.png',
@@ -28,8 +44,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Craft Call - AI Phone Answering for Contractors',
-    description: 'Stop losing $1,200 per missed call. 24/7 AI receptionist starting at $99/month.',
+    title: 'CraftCall — AI Receptionist for Dental & Medical Clinics',
+    description:
+      'Answer every patient call. Book every appointment. Free 2-week pilot for dental clinics.',
     images: ['/og-image.png'],
   },
 }
@@ -37,7 +54,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.variable}>{children}</body>
+      <body className={`${inter.variable} ${playfair.variable}`}>{children}</body>
     </html>
   )
 }
