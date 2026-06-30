@@ -1,10 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { Button } from './ui/Button'
-
-const BOOKING_URL =
-  process.env.NEXT_PUBLIC_BOOKING_URL ||
-  'https://cal.com/achref-merzougui-k97hmk/craft-call'
+import Logo from './Logo'
+import { BOOKING_URL } from '@/lib/constants'
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
@@ -23,8 +21,8 @@ export default function Navigation() {
     >
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <div className="flex justify-between items-center h-16">
-          <a href="#" className="text-xl font-serif font-bold text-navy tracking-tight">
-            CraftCall
+          <a href="#" className="shrink-0">
+            <Logo />
           </a>
           <Button
             variant="primary"

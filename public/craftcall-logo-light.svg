@@ -1,0 +1,9 @@
+<svg width="240" height="56" viewBox="0 0 240 56" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(6, 8)">
+    <path d="M2 8 C2 4 5 1 9 2 L15 4 C17 5 18 7 17 9 L15 13 C18 18 22 22 27 25 L31 23 C33 22 35 23 36 25 L38 31 C39 35 36 38 32 38 C16 38 2 24 2 8 Z" 
+          fill="#ffffff"/>
+    <circle cx="34" cy="6" r="6" fill="#1D9E75"/>
+  </g>
+  <text x="58" y="36" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="-0.8">Craft</text>
+  <text x="130" y="36" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#1D9E75" letter-spacing="-0.8">Call</text>
+</svg>

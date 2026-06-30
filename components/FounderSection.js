@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Button } from './ui/Button'
-
-const DEMO_PHONE = 'tel:+15138227205'
+import { DEMO_PHONE, DEMO_PHONE_DISPLAY } from '@/lib/constants'
 
 export default function FounderSection() {
   return (
@@ -40,7 +39,7 @@ export default function FounderSection() {
                   href={DEMO_PHONE}
                   className="text-navy font-semibold hover:text-teal transition-colors"
                 >
-                  +1 513 822 7205
+                  {DEMO_PHONE_DISPLAY}
                 </a>
                 . That&apos;s the actual CraftCall AI answering.
               </p>

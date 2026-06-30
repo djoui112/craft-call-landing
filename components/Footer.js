@@ -1,10 +1,12 @@
+import Logo from './Logo'
+
 export default function Footer() {
   return (
     <footer className="py-12 bg-navy text-white/60">
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6">
           <div>
-            <p className="text-xl font-serif font-bold text-white mb-1">CraftCall</p>
+            <Logo variant="light" className="mb-2" />
             <p className="text-sm">AI Receptionist for Dental &amp; Medical Clinics</p>
           </div>
 

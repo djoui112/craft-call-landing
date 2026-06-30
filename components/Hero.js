@@ -1,8 +1,5 @@
 import { Button } from './ui/Button'
-
-const BOOKING_URL =
-  process.env.NEXT_PUBLIC_BOOKING_URL ||
-  'https://cal.com/achref-merzougui-k97hmk/craft-call'
+import { BOOKING_URL } from '@/lib/constants'
 
 function PhoneAnimation() {
   return (
