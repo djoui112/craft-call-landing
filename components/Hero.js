@@ -48,12 +48,12 @@ export default function Hero() {
     <section className="bg-white pt-28 pb-16 sm:pt-32 sm:pb-20">
       <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
         <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.15] tracking-tight">
-          You&apos;re losing jobs to voicemail while you&apos;re under a sink.
+          Your phone rang. You were elbow-deep in a furnace. They called the next guy.
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-          CraftCall answers every call, books every job, and replies to
-          every WhatsApp — 24 hours a day. So you don&apos;t have to.
+          CraftCall picks up before that happens — answers the call, books the
+          job on your calendar, and texts you the details. Even at 2am.
         </p>
 
         <div className="mt-10">
@@ -67,7 +67,7 @@ export default function Hero() {
             See it answer a call live →
           </Button>
           <p className="mt-4 text-sm text-gray-500">
-            Free 2-week pilot · No contract · Setup in 48h
+            No contract · Setup in 48h
           </p>
         </div>
 

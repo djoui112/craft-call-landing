@@ -17,7 +17,7 @@ export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://craft-call.com'),
   title: 'CraftCall — AI Receptionist for HVAC & Home Service Contractors',
   description:
-    'CraftCall answers every call, books every job, and replies to WhatsApp — 24 hours a day. Built for HVAC, plumbing, and electrical contractors. Free 2-week pilot.',
+    'CraftCall answers every call, books every job, and replies to WhatsApp — 24 hours a day. Built for HVAC, plumbing, and electrical contractors. No contract, setup in 48h.',
   keywords: [
     'HVAC AI receptionist',
     'contractor phone answering service',
@@ -46,7 +46,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'CraftCall — AI Receptionist for HVAC & Home Service Contractors',
     description:
-      'Answer every job call. Book every appointment. Free 2-week pilot for HVAC contractors.',
+      'Answer every job call. Book every appointment. No contract, setup in 48h for HVAC contractors.',
     images: ['/og-image.png'],
   },
 }

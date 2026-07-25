@@ -18,7 +18,7 @@ export default function PricingSection() {
 
         <div className="border border-navy/20 rounded-lg p-8 sm:p-10 text-left">
           <p className="text-sm font-medium text-teal uppercase tracking-wide mb-2">
-            Pilot Plan — Free for 2 weeks
+            Simple, flat pricing
           </p>
           <p className="text-3xl sm:text-4xl font-bold text-navy mb-1">
             Then $299<span className="text-lg font-normal text-gray-500">/month</span>
@@ -42,7 +42,7 @@ export default function PricingSection() {
             rel="noopener noreferrer"
             className="w-full text-center"
           >
-            Start your free pilot →
+            Book your setup call →
           </Button>
         </div>
 
