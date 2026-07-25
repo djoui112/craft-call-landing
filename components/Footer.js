@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6">
           <div>
             <Logo variant="light" className="mb-2" />
-            <p className="text-sm">AI Receptionist for Dental &amp; Medical Clinics</p>
+            <p className="text-sm">AI Receptionist for HVAC &amp; Home Service Contractors</p>
           </div>
 
           <div className="flex flex-col gap-2 text-sm">

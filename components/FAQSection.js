@@ -3,19 +3,19 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: 'Will patients know they\'re talking to AI?',
+    question: 'Will customers know they\'re talking to AI?',
     answer:
-      'Most don\'t — and most don\'t care, as long as their question gets answered and their appointment gets booked. We can also tell patients upfront if you prefer.',
+      'Most don\'t — and most don\'t care, as long as their question gets answered and their job gets booked. We can also tell callers upfront if you prefer.',
   },
   {
-    question: 'We already have a receptionist.',
+    question: 'We already have a dispatcher / office manager answering calls.',
     answer:
-      'Good. She\'ll finally be able to focus on patients in the room instead of being chained to the phone. CraftCall handles overflow, after-hours, and WhatsApp so she can do her actual job.',
+      'Good. They\'ll finally be able to focus on scheduling and running jobs instead of being chained to the phone. CraftCall handles overflow, after-hours, and WhatsApp so they can do their actual job.',
   },
   {
-    question: 'What about patient data and privacy?',
+    question: 'What about customer data and privacy?',
     answer:
-      'Everything is encrypted and handled with full HIPAA-friendly protocols. We don\'t store sensitive patient data beyond what\'s needed to complete the booking.',
+      'Everything is encrypted. We don\'t store any customer data beyond what\'s needed to complete the booking.',
   },
   {
     question: 'How fast is setup?',
@@ -31,7 +31,7 @@ export default function FAQSection() {
     <section className="py-20 sm:py-24 bg-gray-50">
       <div className="max-w-2xl mx-auto px-5 sm:px-8">
         <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy text-center mb-12">
-          What clinic owners ask us
+          What contractors ask us
         </h2>
 
         <div>

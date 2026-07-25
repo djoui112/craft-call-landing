@@ -15,21 +15,21 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://craft-call.com'),
-  title: 'CraftCall — AI Receptionist for Dental & Medical Clinics',
+  title: 'CraftCall — AI Receptionist for HVAC & Home Service Contractors',
   description:
-    'CraftCall answers every call, books every appointment, and replies to WhatsApp — 24 hours a day. Built for dental and medical clinics. Free 2-week pilot.',
+    'CraftCall answers every call, books every job, and replies to WhatsApp — 24 hours a day. Built for HVAC, plumbing, and electrical contractors. Free 2-week pilot.',
   keywords: [
-    'dental clinic AI receptionist',
-    'medical office phone answering',
-    'dental appointment booking AI',
-    'after hours dental calls',
-    'HIPAA friendly AI receptionist',
-    'dental practice phone automation',
+    'HVAC AI receptionist',
+    'contractor phone answering service',
+    'AI dispatcher for HVAC',
+    'after hours HVAC calls',
+    'missed call AI for contractors',
+    'plumbing electrical phone automation',
   ],
   openGraph: {
-    title: 'CraftCall — AI Receptionist for Dental & Medical Clinics',
+    title: 'CraftCall — AI Receptionist for HVAC & Home Service Contractors',
     description:
-      'Your clinic is losing patients while you sleep. CraftCall answers every call, books appointments, and handles WhatsApp — 24/7.',
+      "You're losing jobs to voicemail while you're on a service call. CraftCall answers every call, books the job, and handles WhatsApp — 24/7.",
     url: 'https://craft-call.com',
     siteName: 'CraftCall',
     images: [
@@ -44,9 +44,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CraftCall — AI Receptionist for Dental & Medical Clinics',
+    title: 'CraftCall — AI Receptionist for HVAC & Home Service Contractors',
     description:
-      'Answer every patient call. Book every appointment. Free 2-week pilot for dental clinics.',
+      'Answer every job call. Book every appointment. Free 2-week pilot for HVAC contractors.',
     images: ['/og-image.png'],
   },
 }

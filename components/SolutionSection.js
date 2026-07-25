@@ -1,14 +1,14 @@
 const steps = [
   {
-    label: 'Patient calls at 11pm',
-    detail: 'Someone needs a cleaning next week. Or they have a toothache. Your office is closed.',
+    label: 'A customer calls at 11pm',
+    detail: 'Their AC just died, or a pipe just burst. They need someone out this week. You\'re on another job.',
   },
   {
     label: 'CraftCall answers in 2 rings',
-    detail: 'Picks up with your clinic name. Asks what they need. Sounds like a real person.',
+    detail: 'Picks up with your business name. Asks what they need. Sounds like a real person.',
   },
   {
-    label: 'Appointment booked. You get a text.',
+    label: 'Job booked. You get a text.',
     detail: 'The slot goes on your calendar. You wake up to a summary on your phone.',
   },
 ]
@@ -18,7 +18,7 @@ export default function SolutionSection() {
     <section className="py-20 sm:py-24 bg-gray-50">
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy text-center mb-14">
-          Three things happen when a patient calls
+          Three things happen when a customer calls
         </h2>
 
         {/* Desktop: horizontal flow */}

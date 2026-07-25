@@ -48,11 +48,11 @@ export default function Hero() {
     <section className="bg-white pt-28 pb-16 sm:pt-32 sm:pb-20">
       <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
         <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.15] tracking-tight">
-          Your clinic is losing patients while you sleep.
+          You&apos;re losing jobs to voicemail while you&apos;re under a sink.
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-          CraftCall answers every call, books every appointment, and replies to
+          CraftCall answers every call, books every job, and replies to
           every WhatsApp — 24 hours a day. So you don&apos;t have to.
         </p>
 

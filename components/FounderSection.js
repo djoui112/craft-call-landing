@@ -9,8 +9,8 @@ export default function FounderSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-64 sm:h-80 lg:h-[420px] rounded-lg overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop&auto=format"
-              alt="Dental clinic reception area"
+              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop&auto=format"
+              alt="Contractor on a service call"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -19,19 +19,19 @@ export default function FounderSection() {
 
           <div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy leading-tight mb-8">
-              Built by someone who got tired of watching clinics lose patients to voicemail
+              Built by someone who got tired of watching contractors lose jobs to voicemail
             </h2>
 
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                I&apos;m Achref. I&apos;m an AI automation engineer and I&apos;ve spent the
-                last year building and stress-testing AI receptionist systems for dental
-                and medical clinics.
+                I&apos;m Achref. I&apos;m an AI automation engineer, and I built CraftCall
+                after seeing how many home service businesses lose jobs simply because
+                nobody could pick up the phone while they were on a call.
               </p>
               <p>
                 CraftCall isn&apos;t a venture-funded startup with a 50-person team.
                 It&apos;s a focused product built by someone who actually picks up the
-                phone and talks to clinic owners.
+                phone and talks to business owners.
               </p>
               <p>
                 If you want to see it work live — call our demo line right now:{' '}

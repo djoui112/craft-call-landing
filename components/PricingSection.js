@@ -47,7 +47,7 @@ export default function PricingSection() {
         </div>
 
         <p className="mt-10 text-lg sm:text-xl font-semibold text-navy leading-relaxed">
-          One new patient = $2,000 lifetime value.
+          One recovered job = $500-5,000.
           <br />
           One month of CraftCall = $299.
           <br />
